@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/ehr_icp_project_backend"
+]
+resolver = "2"

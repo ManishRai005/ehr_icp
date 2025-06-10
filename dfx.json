@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "canisters": {
+    "ehr_icp_project_backend": {
+      "type": "rust",
+      "package": "ehr_icp_project_backend",
+      "candid": "src/ehr_icp_project_backend/ehr_icp_project_backend.did"
+    },
+    "ehr_icp_frontend": {
+      "type": "assets",
+      "source": ["src/ehr_icp_frontend/dist"],
+      "build": "npm run build --prefix src/ehr_icp_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "output": "src/declarations"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  }
+}
